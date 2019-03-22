@@ -1,0 +1,142 @@
+\documentclass[11pt]{article}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{pgfplots}
+
+\usepackage{geometry}
+\geometry{legalpaper, margin=0.9in}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+%Gummi|065|=)
+\title{\textbf{Entregable Practica 2: Comparación de código genético}\\ }
+\author{Ignacio Ferrer Sanz\\
+		Alejandro Tauste Botella}
+\begin{document}
+
+\maketitle
+
+\section*{Ejercicio 1}
+Para la realización de este ejercicio se ha definido una sección paralela para determinar el número de hilos e imprimirlos por consola. Seguidamente se han obtenido los tiempos antes y después de la instrucción de \emph{buscar más parecidos}. De esta forma, obtenemos el tiempo que tarda en realizar la función. Todo esto importando las librerías necesarias de OpenMP.
+
+\emph{El tiempo obtenido con una ejecución de 3 hilos es de 134 segundos}
+\begin{lstlisting}
+#include <omp.h>
+#include <stdio.h>
+
+					...
+					
+int hilos;
+  #pragma omp parallel 
+  {
+    if(omp_get_thread_num() == 0) {
+      	//Obtenemos el num. de hilos
+      	hilos = omp_get_num_threads();
+  		}
+   }
+					...
+
+printf("N de hilos: %d\n", hilos);
+t1 = omp_get_wtime();
+busca_mas_parecidos(nt1,tabla1,nt2,tabla2,ps);
+t2 = omp_get_wtime();
+
+printf("Tiempo: %f\n", t2-t1);
+escribe_resultado(salida,tabla1,nt2,ps,numeros);
+
+\end{lstlisting}
+
+\section*{Ejercicio 2}
+Para el ejercicio 2 definimos una sections. Dentro de la sections definimos una section por cada fichero a cargar.
+
+\emph{El tiempo obtenido con una ejecución de 3 hilos es de 134 segundos}
+\begin{lstlisting}
+#pragma omp parallel sections 
+  {
+	#pragma omp section
+  	err  = lee_lineas(argv[1],&nt1,&tabla1);
+
+  	#pragma omp section  
+  	err2 = lee_lineas(argv[2],&nt2,&tabla2);
+}
+\end{lstlisting}
+
+\pagebreak
+
+\section*{Ejercicio 3}
+Definimos una cláusula parallel for privatizando las variables d, dm, im e i; con el objetivo, de que estas variables tengan el valor correspondiente a cada hilo, evitando de esta forma que la ejecución del código presente condiciones de carrera.
+
+\begin{lstlisting}
+
+void busca_mas_parecidos(int nt1,char *tabla1[],int nt2,char *tabla2[],int ps[])
+{ int i,j,d,im,dm;// dm es la distancia del codigo mas parecido, im su indice
+                  // dm is the distance of the most similar code, im is its index
+  
+  #pragma omp parallel for private(d,dm,im,i)
+    for ( j = 0 ; j < nt2 ; j++ ) {
+      dm = MAX_LON + 1;
+      for ( i = 0 ; i < nt1 ; i++ ) {
+			d = distancia(tabla1[i],tabla2[j]);
+			if ( d < dm ) {
+			  dm = d;
+			  im = i;
+			}
+       }
+      ps[j] = im;
+    }
+
+\end{lstlisting}
+
+Al realizar la orden por consola de: \emph{comp salida1.txt salida2.txt}, no se arrojan diferencias entre los dos archivos por tanto, la ejecución es correcta en ambos apartados.
+
+\section*{Ejercicio 4}
+
+Creamos una cláusula OpenMP, para paralelizar el bucle externo, privatizando las variables d e i. Adicionalmente, debemos crear una sección critica mediante la cláusula critical con el objetivo de que para cada hilo se realize la comprobación del if.
+
+\emph{El tiempo obtenido con una ejecución de 4 hilos es de 34 segundos}
+
+\begin{lstlisting}
+void busca_mas_parecidos(int nt1,char *tabla1[],int nt2,char *tabla2[],int ps[])
+{ int i,j,d,im,dm;// dm es la distancia del codigo mas parecido, im su indice
+                  // dm is the distance of the most similar code, im is its index
+  for ( j = 0 ; j < nt2 ; j++ ) {
+    dm = MAX_LON + 1;
+    #pragma omp parallel for private(d,i)
+    for ( i = 0 ; i < nt1 ; i++ ) {
+      d = distancia(tabla1[i],tabla2[j]);
+      #pragma omp critical
+      if ( d < dm ) {
+        dm = d;
+        im = i;
+      }
+    }
+    ps[j] = im;
+  }
+}
+\end{lstlisting}
+
+\pagebreak
+
+\section*{Ejercicio 5}
+
+\end{document}

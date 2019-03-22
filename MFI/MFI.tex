@@ -1,0 +1,178 @@
+\documentclass[12pt]{amsart}
+
+    \addtolength{\hoffset}{-2.25cm}
+    \addtolength{\textwidth}{4.5cm}
+    \addtolength{\voffset}{-2.5cm}
+    \addtolength{\textheight}{5cm}
+    \setlength{\parskip}{0pt}
+    \setlength{\parindent}{15pt}
+    
+    \usepackage{amsthm}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage[utf8]{inputenc}
+    \usepackage[colorlinks = true, linkcolor = black, citecolor = black, final]{hyperref}
+    
+    \usepackage{graphicx}
+    \usepackage{multicol}
+    \usepackage{ marvosym }
+    \usepackage{wasysym}
+    \usepackage{tikz}
+    \usetikzlibrary{patterns}
+    
+    \newcommand{\ds}{\displaystyle}
+    \DeclareMathOperator{\sech}{sech}
+    
+    
+    \setlength{\parindent}{0in}
+    \pagestyle{empty}
+    \begin{document}
+    \thispagestyle{empty}
+    {\scshape Nacchofer31} \hfill {\scshape \large Apuntes MFI} \hfill {\scshape Tema \#1}
+     
+    \hrule
+    \medskip
+    
+    \textbf{- La lógica}, proporciona una formulación \textbf{simbólica} e \textbf{independiente del dominio} de las leyes del pensamiento humano.
+    Este doble carácter hace posible mecanizar sus técnicas y métodos. 
+    
+    \begin{itemize}
+    
+    \item  PROBLEMA: 
+    
+    - Tiene un carácter \textbf{estático}, se desarrolló para estudiar objetos matemáticos  bien definidos y consistentes, se requieren
+    formas más dinámicas (y menos perfectas) de lógica. 
+    
+    - Los métodos de la lógica resultan más \textbf{caros} en términos computacionales, es necesario reducir sus costes.
+    \item  SOLUCIÓN: \textbf{Lógica computacional}, modela el conocimiento impreciso, incompleto, dinámico, distribuido. 
+    Soporta el razonamiento aproximado, temporal, no monótono,...
+    
+    
+    \end{itemize}
+    
+    \textbf{Lógicas para Aplicaciones software:}
+
+    
+    
+    Restricciones: \emph{- Lógica ecuacional}
+    
+    Extensiones de la lógica: \emph{- Lógica difusa - Lógica Lineal - Lógica
+    Modales}
+
+    \textbf{- Lógica ecuacional:}
+    
+    \begin{itemize}
+    
+    \item  Subconjunto de la lógica de primer orden,
+     se eliminan todas las conectivas lógicas. El símbolo de predicado
+     es la (=).
+    \item s=t, dos términos son semánticamente iguales, aunque son diferentes
+     sintácticamente. \emph{Ej: ascii('0') = 48}
+    \item Un conjunto E de ecuaciones con el mismo símbolo "raíz" f
+    en las partes izquierdas de las ecuaciones se describe como
+    "la definición" de f. \emph{even(0)=true - even(X)=even(X-2)}
+    
+    \end{itemize}
+    
+    \textbf{Lógica para la programación:}
+
+    Restricciones - Estilo de Lenguaje: 
+    
+    - \emph{Lógica ecuacional - Funcional (Haskell)}
+    
+    - \emph{Lógica clasual - Relacional (Prolog)}
+    
+    Extensiones: 
+    
+    - \emph{Lógica many-sorted +tipos}
+
+    - \emph{Lógica order-sorted +herencia}
+
+    - \emph{Lógica (modal) temporal +concurrencia}
+
+    - \emph{Lógica (modal) dinámica +objetos}
+    
+    \textbf{- Unificación de lógicas: Lógica de Reescritura (RWL)}, 
+    lógica del cambio que permite especificar la dinámica de un
+    sistema. 
+    
+    \begin{itemize}
+    
+    \item  Integración "sin costuras" de distintas características: funciones,
+    y tipos, indeterminismo, concurrencia, reflexión y genericidad.
+    
+    \item  Marco unificado en el que pueden definir distintas lógicas: ecuacional, clasual, lineal.
+    
+    \item  Existe una lógica temporal, asociada a la RWL, estrictamente
+    más potente que CTL/LTL: la temporal logic of rewriting (LTR).
+    
+    \end{itemize}
+    
+    \textbf{- Maude:}, implementa eficientemente la lógica
+    RWL.  
+     \begin{itemize}
+    
+        \item Soporta de forma natural la especificación formal / modelado
+        / programación en un estilo funcional.
+        
+        \item  Distingue entre la parte concurrente y funcional.
+        
+        \item  Reescritura módulo listas, conjuntos, multiconjuntos,...
+        mediante atributos ecuacionales.
+
+        \item Genericidad y tipos ordenados de datos.
+
+        \item Infraestructura para análisis y verficación formal
+        (alcanzabilidad, model-checking, theorem proving).
+
+        \item Reflexión como soporte al meta-modelado, ejecución
+        simbólica y construcción rápida de herramientas de soporte.
+        
+        \end{itemize}
+    \pagebreak
+
+    \textbf{- Lenguaje Maude}
+
+    \begin{itemize}
+        \item Sintaxis: Basada en ecuaciones y reglas de reescritura
+        (estilo Haskell, ML, Scheme o Lisp)
+        \item Semántica: Basada en la Lógica de Reescritura (RWL), que
+        modela funciones, concurrencia y objetos.
+    \end{itemize}
+
+    \textbf{- Fundamentos de Maude}, consta de tres tipos de módulos:
+
+    \begin{itemize}
+        \item Módulos funcionales \emph{fmod \textless conjunto de ecuaciones \textgreater endfm}
+        \item Módulos de sistema \emph{mod \textless conjunto de ecuaciones/reglas de escritura \textgreater endm}
+        \item Módulos O2 \emph{omod ... endom}
+    \end{itemize}
+
+    \textbf{- E (Ecuaciones):}
+    \begin{itemize}
+        \item Definen funciones confluentes y terminantes.
+        \item Se definen dentro de módulos funcionales.
+        \item E puede incluir un conjunto Ax de Axiomas algebraicos.
+        \item Representan la parte estática del sistema.
+        \item Se aplican de forma determinista.
+    \end{itemize}
+
+    \textbf{- R (Reglas de reescritura):}
+    \begin{itemize}
+        \item Definen funciones que pueden ser no confluentes y/o no
+        terminantes.
+        \item Se definen dentro de módulos de sistema.
+        \item Especifican la dinámica del sistema, es decir, acciones que
+        puedan producir transiciones del mismo.
+    \end{itemize}
+
+    \textbf{- Paso de reescritura (Maude step)}, dado un término (o estado) s,
+    un paso de reescritura de t a t' se consigue aplicando una regla de R
+    módulo las ecuaciones de E. 
+
+    El estado t se simplifica usando las ecuaciones de E hasta
+    alcanzar su forma irreducible (tE) con respecto E.
+
+    Una traza de ejecución es una secuencia de Maude steps.
+    
+    \end{document}
