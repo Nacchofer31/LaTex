@@ -1,7 +1,7 @@
-PWD /home/igfersa/Documentos/LaTex/TSRB2/MFI
+PWD /home/igfersa/Documentos/LaTex/MFI
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/igfersa/Documentos/LaTex/TSRB2/MFI/MFI.tex
+INPUT /home/igfersa/Documentos/LaTex/MFI/MFI.tex
 OUTPUT MFI.log
 INPUT /usr/share/texmf-dist/tex/latex/amscls/amsart.cls
 INPUT /usr/share/texmf-dist/tex/latex/amscls/amsart.cls
@@ -231,12 +231,14 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texmf-dist/tex/latex/base/omlcmr.fd
 INPUT /usr/share/texmf-dist/tex/latex/base/omlcmr.fd
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT MFI.aux
 INPUT ./MFI.out
 INPUT ./MFI.out
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb

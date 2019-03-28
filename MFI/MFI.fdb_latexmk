@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1553277512 "/home/igfersa/Documentos/LaTex/TSRB2/MFI/MFI.tex" "MFI.pdf" "MFI" 1553277513
-  "/home/igfersa/Documentos/LaTex/TSRB2/MFI/MFI.tex" 1553277512 6128 c389cdc3e1bcc68753e9d5dc477aaad4 ""
+["pdflatex"] 1553622976 "/home/igfersa/Documentos/LaTex/MFI/MFI.tex" "MFI.pdf" "MFI" 1553622976
+  "/home/igfersa/Documentos/LaTex/MFI/MFI.tex" 1553622976 13278 edc0c711863a58d8bd062ceaff496db8 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1550406775 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1550406775 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1550406775 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -16,6 +16,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1550406775 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1550406775 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1550406775 1520 eccf95517727cb11801f4f1aee3a21b4 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm" 1550406775 1524 554068197b70979a55370e6c6495f441 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1550406775 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1550406775 1300 b62933e007d01cfd073f79b963c01526 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1550406775 1292 21c1c5bfeaebccffdb478fd231a0997d ""
@@ -31,6 +32,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1550406775 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb" 1550406775 32001 6aeea3afe875097b1eb0da29acd61e28 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1550406775 36741 fa121aac0049305630cf160b86157ee4 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb" 1550406775 36912 b448ef9ad9d7228ec3c6e71005136d55 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1550406775 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1550406775 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1550406775 36118 fad905eba93cff5bce1e185fe980a177 ""
@@ -143,11 +145,11 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1550406775 33301 a3134070eacafb10b1f371612ce2650d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1550608159 334148 1b9d30ff8c861d6082e3e9bfccd8d7eb ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1550608153 7919196 424f84d3a6ce4ab74c4043b60f7d5a76 ""
-  "MFI.aux" 1553277513 798 120527c3c5e2e10297719b66b6447ed4 ""
-  "MFI.out" 1553277513 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "MFI.tex" 1553277512 6128 c389cdc3e1bcc68753e9d5dc477aaad4 ""
+  "MFI.aux" 1553622976 798 120527c3c5e2e10297719b66b6447ed4 ""
+  "MFI.out" 1553622976 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "MFI.tex" 1553622976 13278 edc0c711863a58d8bd062ceaff496db8 ""
   (generated)
+  "MFI.pdf"
   "MFI.log"
   "MFI.out"
-  "MFI.pdf"
   "MFI.aux"
