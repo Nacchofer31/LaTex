@@ -389,13 +389,13 @@
     \begin{center}
         \includegraphics[width=10cm, height=5cm]{t2clasico.png}
         
-        Ciclo de Vida Clásico
+        - Ciclo de Vida Clásico -
 
         \medskip
 
         \includegraphics[width=10cm, height=5cm]{t2prototipo.png}
         
-        Ciclo de Vida con Prototipado
+        - Ciclo de Vida con Prototipado -
     \end{center}
     
     \textbf{- De Propiedades a Propiedades}
@@ -408,10 +408,124 @@
     \begin{center}
         \includegraphics[width=10cm, height=5cm]{t2progauto.png}
         
-        Programación Automática
+        - Programación Automática -
     \end{center}
 
-    
+    \textbf{- De Programas a Programas}, transformación de
+    programas.
 
-    
+    \begin{itemize}
+        \item \textrightarrow Compilación, Optimización...
+        \item \textrightarrow Especialización, Fragmentación,
+        Refactorización, Ofuscación,...
+    \end{itemize}
+
+    \textbf{- Transformaciones}
+
+    \begin{itemize}
+        \item Compilación de programas.
+        \item Optimización de programas: transformaciones
+        "fuente a fuente" para mejorar la eficiencia.
+        \item Ofuscación: dificultar el plagio o la ingeniería
+        inversa.
+        \item Mantenimiento y evolución del software:
+        \subitem - Fragmentación (slicing): extrae fragmentos
+        ejecutables en base a un análisis de dependencias
+        en el programa.
+        \subitem - Refactorización: reestructura el código
+        para mejorar atributos no funcionales como
+        la legibilidad, complejidad, extensibilidad...
+        \subitem - Derivación de programas: obtiene código
+        eficiente a partir de especificaciones correctas.
+    \end{itemize}
+
+    \textbf{- Transformación de programas}
+    \begin{itemize}
+        \item Especialización (partial evaluation/program
+        specialization)
+        \item Fragmentación (program slicing)
+        \item Refactorización (program refactoring)
+    \end{itemize}
+    \textbf{- Aplicaciones}
+    \begin{itemize}
+        \item Especialización de programas paramétricos:
+        Mejora hasta el 400\%: Reconocimiento patrones, sistemas
+        expertos, redes neuronales,...
+        \item Optimización de programas (oculta en compiladores).
+        \item Compilación y Generación de compiladores: Proyecciones de 
+        Futamura.
+    \end{itemize}
+
+    \textbf{- Proyecciones Futamura}
+    \begin{center}
+        \includegraphics[width=10cm, height=4.5cm]{t2futamura.png}
+        
+        - Futamura -
+
+         1. mix hace papel de compilador. Limitación: mix compila
+        el lenguaje en que está escrito el propio mix.
+
+        \includegraphics[width=7cm, height=3cm]{t2futamura1.png}
+
+         2. genera compilador a través del intérprete 
+         (automáticamente). Limitación: mix debe ser autoaplicable:
+
+         \includegraphics[width=7cm, height=3cm]{t2futamura2.png}
+
+         3. produce un "generador de compiladores"
+
+         \includegraphics[width=7cm, height=3cm]{t2futamura3.png}
+    \end{center}
+
+    \textbf{- Fragmentación (program slicing)}, obtención de
+    un fragmento del programa (program slice), que contiene
+    las instrucciones que puedan afectar al valor de una variable
+    v en un punto o instrucción p del código.
+    \begin{itemize}
+        \item Suele usarse como apoyo a: Depuración y Mantenimiento y 
+        análisis del código.
+        \item Para identificar el fragmento de interés, se usan
+        técnicas de análisis de flujo de datos.
+    \end{itemize}
+
+    \textbf{- Criterio de slicing}, se puede generalizar como
+        \textless p,v \textgreater donde:
+        
+        - p es el punto de observación
+
+        - v es un conjunto de variables que se desea observar
+        el punto "p".
+
+    \textbf{- Propiedades de un slice correcto}:
+
+    \begin{itemize}
+        \item Obtenido a partir del programa original aplicando
+        ÚNICAMENTE borrado.
+        \item El fragmento debe comportarse como el programa original
+        en lo que respecta al criterio fijado.
+        \item Ejemplos: Jslice / Indus - Fragmentación de programas y
+        JRefactory - Refactorización.
+    \end{itemize}
+
+    \textbf{- Refactorización de programas}, mejorar el diseño del código
+    existente, cambia sistematicamente la estructura del
+    programa, sin alterar su funcionalidad.
+
+    \begin{itemize}
+        \item Contexto de aplicación:
+        
+        \textrightarrow mantenimiento del
+        software: independiza los cambios funcionales de los
+        estructurales.
+
+        \textrightarrow procesos de desarrollo ágiles: se
+        facilita la mejora continua del diseño y la adaptabilidad
+        a cambios frente a las metodologías basadas en un
+        diseño monolítico desde el principio.
+
+        \item Pasos en un proceso de refactorización:
+
+        \textrightarrow transformaciones de programas "pequeñas"
+        e incrementales que preservan la semántica.
+    \end{itemize}
     \end{document}

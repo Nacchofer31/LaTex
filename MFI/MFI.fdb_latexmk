@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1554189136 "/home/igfersa/Documentos/LaTex/MFI/MFI.tex" "MFI.pdf" "MFI" 1554189137
-  "/home/igfersa/Documentos/LaTex/MFI/MFI.tex" 1554189136 14752 eab101a12942e04d620e3ad081d404f6 ""
+["pdflatex"] 1554396132 "/home/igfersa/Documentos/LaTex/MFI/MFI.tex" "MFI.pdf" "MFI" 1554396133
+  "/home/igfersa/Documentos/LaTex/MFI/MFI.tex" 1554396132 19103 443be3e7962e30d9411a3db54d0f82ca ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1550406775 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1550406775 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1550406775 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -152,14 +152,18 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1550406775 33301 a3134070eacafb10b1f371612ce2650d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1550608159 334148 1b9d30ff8c861d6082e3e9bfccd8d7eb ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1550608153 7919196 424f84d3a6ce4ab74c4043b60f7d5a76 ""
-  "MFI.aux" 1554189137 798 120527c3c5e2e10297719b66b6447ed4 ""
-  "MFI.out" 1554189137 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "MFI.tex" 1554189136 14752 eab101a12942e04d620e3ad081d404f6 ""
+  "MFI.aux" 1554396132 798 120527c3c5e2e10297719b66b6447ed4 ""
+  "MFI.out" 1554396132 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "MFI.tex" 1554396132 19103 443be3e7962e30d9411a3db54d0f82ca ""
   "images/t2clasico.png" 1554187533 15317 95e208d0a87dba112227afca6ff61af7 ""
+  "images/t2futamura.png" 1554284862 35705 bb5c6d47bc4da516ccc066ecfd8c0730 ""
+  "images/t2futamura1.png" 1554285067 20726 1ab0b91a01b445d45a6a666c2cb15ce6 ""
+  "images/t2futamura2.png" 1554285403 19794 418347115ed00e8617489bd228585f5d ""
+  "images/t2futamura3.png" 1554285484 19423 b792b29fd952500504deeed3201819a4 ""
   "images/t2progauto.png" 1554188950 23002 f25f33cc5eca083ad15e0296048ffc3d ""
   "images/t2prototipo.png" 1554187585 21917 a0bce4a906f55713c752386470cf46df ""
   (generated)
+  "MFI.out"
   "MFI.log"
   "MFI.pdf"
-  "MFI.out"
   "MFI.aux"
