@@ -262,6 +262,9 @@ INPUT ./images/t2futamura2.png
 INPUT images/t2futamura3.png
 INPUT ./images/t2futamura3.png
 INPUT ./images/t2futamura3.png
+INPUT images/t2agilnoagil.png
+INPUT ./images/t2agilnoagil.png
+INPUT ./images/t2agilnoagil.png
 INPUT MFI.aux
 INPUT ./MFI.out
 INPUT ./MFI.out
